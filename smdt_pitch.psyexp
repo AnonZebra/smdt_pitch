@@ -105,7 +105,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="9999" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Klicka på den övre knappen om du tror att den sista tonen är högre än den första.&amp;#10;&amp;#10;Klicka på den nedre knappen om du tror att den sista tonen är lägre än den första. " valType="str"/>
+        <Param name="text" updates="constant" val="Klicka på den övre knappen om du tror att den sista tonen var högre än den första.&amp;#10;&amp;#10;Klicka på den nedre knappen om du tror att den sista tonen var lägre än den första. " valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="30" valType="code"/>
       </TextComponent>
