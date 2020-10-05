@@ -49,7 +49,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0.2)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="shape" updates="constant" val="rectangle" valType="str"/>
         <Param name="size" updates="constant" val="(0.3, 0.1)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
@@ -74,7 +74,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0.2)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="shape" updates="constant" val="rectangle" valType="str"/>
         <Param name="size" updates="constant" val="(0.3, 0.1)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
@@ -98,7 +98,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0.35)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="2.5" valType="code"/>
@@ -122,7 +122,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0.2)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -146,7 +146,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0.2)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -163,14 +163,14 @@
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="# get higher frequency for this trial&amp;#10;diff = diff_ls[trial_counter]&amp;#10;higher_frequency = BASE_FREQUENCY + diff&amp;#10;&amp;#10;# set trial sound file path and specify correct response&amp;#10;second_higher = second_higher_ls[trial_counter]&amp;#10;if second_higher:&amp;#10;    first_freq, second_freq = BASE_FREQUENCY, higher_frequency&amp;#10;    correct_rect_name = pitch_rect_higher.name&amp;#10;    &amp;#10;else:&amp;#10;    first_freq, second_freq = higher_frequency, BASE_FREQUENCY&amp;#10;    correct_rect_name = pitch_rect_lower.name&amp;#10;&amp;#10;sound_fname = f'{STIM_FBASE}{first_freq}_{second_freq}.wav'&amp;#10;&amp;#10;sound_fpath = os.path.join(STIM_DIR, sound_fname)&amp;#10;&amp;#10;#pitch_sound_2.sound = 'stimuli/smdtpitch_500_501.wav'&amp;#10;pitch_rect_higher.fillColor = [0,0,0]&amp;#10;pitch_rect_lower.fillColor = [0,0,0]&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# get higher frequency for this trial&amp;#10;diff = diff_ls[trial_counter]&amp;#10;higher_frequency = BASE_FREQUENCY + diff&amp;#10;&amp;#10;# store trial start time for saving during &quot;End Routine&quot;&amp;#10;trial_start_time = tThisFlipGlobal + 0&amp;#10;&amp;#10;# set trial sound file path and specify correct response&amp;#10;second_higher = second_higher_ls[trial_counter]&amp;#10;if second_higher:&amp;#10;    first_freq, second_freq = BASE_FREQUENCY, higher_frequency&amp;#10;    correct_rect_name = pitch_rect_higher.name&amp;#10;    &amp;#10;else:&amp;#10;    first_freq, second_freq = higher_frequency, BASE_FREQUENCY&amp;#10;    correct_rect_name = pitch_rect_lower.name&amp;#10;&amp;#10;sound_fname = f'{STIM_FBASE}{first_freq}_{second_freq}.wav'&amp;#10;&amp;#10;sound_fpath = os.path.join(STIM_DIR, sound_fname)&amp;#10;&amp;#10;#pitch_sound_2.sound = 'stimuli/smdtpitch_500_501.wav'&amp;#10;pitch_rect_higher.fillColor = [0,0,0]&amp;#10;pitch_rect_lower.fillColor = [0,0,0]&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Py" valType="str"/>
         <Param name="Each Frame" updates="constant" val="if tThisFlip &gt;= PLAY_DURATION-frameTolerance:&amp;#10;    pitch_rect_higher.fillColor = HIGHER_COLOR&amp;#10;    pitch_rect_lower.fillColor = LOWER_COLOR&amp;#10;" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="# store name of clicked rectangle, in order to set color of inter trial &amp;#10;# rectangles&amp;#10;clicked_rect_name = mouse_trial.clicked_name[0]&amp;#10;&amp;#10;# check if response was correct or not, converting boolean to integer &amp;#10;# (1 for correct, 0 for incorrect response) for more compact and &amp;#10;# familiar data representation&amp;#10;response_correct = int(correct_rect_name == clicked_rect_name)&amp;#10;&amp;#10;# save the data&amp;#10;trials.addData('first_freq', first_freq)&amp;#10;trials.addData('second_freq', second_freq)&amp;#10;trials.addData('correct_name', correct_rect_name)&amp;#10;trials.addData('response_correct', response_correct)&amp;#10;&amp;#10;trial_counter += 1&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="trial_duration = tThisFlipGlobal - trial_start_time&amp;#10;# store name of clicked rectangle, in order to set color of inter trial &amp;#10;# rectangles&amp;#10;clicked_rect_name = mouse_trial.clicked_name[0]&amp;#10;&amp;#10;# check if response was correct or not, converting boolean to integer &amp;#10;# (1 for correct, 0 for incorrect response) for more compact and &amp;#10;# familiar data representation&amp;#10;response_correct = int(correct_rect_name == clicked_rect_name)&amp;#10;&amp;#10;# save the data&amp;#10;trials.addData('trial_start_time', trial_start_time)&amp;#10;trials.addData('trial_duration', trial_duration)&amp;#10;trials.addData('first_freq', first_freq)&amp;#10;trials.addData('second_freq', second_freq)&amp;#10;trials.addData('correct_name', correct_rect_name)&amp;#10;trials.addData('response_correct', response_correct)&amp;#10;trial_counter += 1&amp;#10;" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="code_trial" valType="code"/>
       </CodeComponent>
@@ -179,7 +179,7 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="hamming" updates="constant" val="True" valType="bool"/>
         <Param name="name" updates="None" val="sound_trial" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="sound" updates="set every repeat" val="$sound_fpath" valType="str"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -196,14 +196,14 @@
         <Param name="forceEndRoutineOnPress" updates="constant" val="valid click" valType="str"/>
         <Param name="name" updates="None" val="mouse_trial" valType="code"/>
         <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
-        <Param name="saveMouseState" updates="None" val="final" valType="str"/>
+        <Param name="saveMouseState" updates="None" val="never" valType="str"/>
         <Param name="saveParamsClickable" updates="constant" val="name," valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="2.5" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="9999" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
         <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
       </MouseComponent>
@@ -223,7 +223,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0.2)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="shape" updates="constant" val="rectangle" valType="str"/>
         <Param name="size" updates="constant" val="(0.3, 0.1)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
@@ -248,7 +248,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0.2)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="shape" updates="constant" val="rectangle" valType="str"/>
         <Param name="size" updates="constant" val="(0.3, 0.1)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
@@ -272,7 +272,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0.2)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -296,7 +296,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0.2)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -323,7 +323,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0.2)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="shape" updates="constant" val="rectangle" valType="str"/>
         <Param name="size" updates="constant" val="(0.3, 0.1)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
@@ -348,7 +348,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0.2)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="shape" updates="constant" val="rectangle" valType="str"/>
         <Param name="size" updates="constant" val="(0.3, 0.1)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
@@ -389,7 +389,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0.2)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -413,7 +413,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0.2)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -439,7 +439,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0" valType="code"/>
@@ -463,7 +463,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -10)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0" valType="code"/>
@@ -483,7 +483,7 @@
         <Param name="newClicksOnly" updates="constant" val="True" valType="bool"/>
         <Param name="saveMouseState" updates="None" val="never" valType="str"/>
         <Param name="saveParamsClickable" updates="constant" val="" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="2.5" valType="code"/>
@@ -507,7 +507,7 @@
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
