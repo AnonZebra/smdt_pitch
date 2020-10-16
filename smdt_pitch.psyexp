@@ -56,7 +56,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="9999" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </PolygonComponent>
@@ -81,7 +81,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="9999" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
       </PolygonComponent>
@@ -99,11 +99,11 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0.35)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startEstim" updates="None" val="2.5" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="2.5" valType="code"/>
+        <Param name="startVal" updates="None" val="$PLAY_DURATION" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="9999" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="Klicka på den övre knappen om du tror att den sista tonen var högre än den första.&amp;#10;&amp;#10;Klicka på den nedre knappen om du tror att den sista tonen var lägre än den första. " valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
@@ -127,7 +127,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="9999" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="Högre" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
@@ -151,21 +151,21 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="9999" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="Lägre" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <CodeComponent name="code_trial">
-        <Param name="Before Experiment" updates="constant" val="from random import choices&amp;#10;&amp;#10;# SMDT original article: &amp;#10;# &quot;Difficulty increased progressively by making the pitch difference &amp;#10;# between the notes smaller in eight steps, in the following &amp;#10;# order: 17, 12, and 8 Hz difference (three items of each); 5, 4, 3, &amp;#10;# and 2 Hz difference (four items of each); 1 Hz difference (two items).&quot;&amp;#10;# form list which defines the tone difference for each trial&amp;#10;diff_ls = (&amp;#10;    [17] * 3 + &amp;#10;    [12] * 3 +&amp;#10;    [8] * 3 +&amp;#10;    [5] * 4 +&amp;#10;    [4] * 4 +&amp;#10;    [3] * 4 +&amp;#10;    [2] * 4 +&amp;#10;    [1] * 2&amp;#10;)&amp;#10;num_trials = len(diff_ls)&amp;#10;&amp;#10;# randomly generate a list which specifies for each trial if the second&amp;#10;# tone should be higher or lower than the first one. True means that the &amp;#10;# second tone is higher, False that the second tone is lower&amp;#10;second_higher_ls = choices([True, False], k=num_trials)&amp;#10;&amp;#10;# initialize trial counter&amp;#10;trial_counter = 0&amp;#10;&amp;#10;# define sound play duration (set to slightly longer than the actual&amp;#10;# sound file duration, 2.13s, to ensure that sounds are played &amp;#10;# in their entirety)&amp;#10;PLAY_DURATION = 2.5&amp;#10;&amp;#10;# define base frequency (500Hz according to SMDT article)&amp;#10;BASE_FREQUENCY = 500&amp;#10;&amp;#10;# define stimuli directory name&amp;#10;STIM_DIR = 'stimuli'&amp;#10;# define stimuli file name base&amp;#10;STIM_FBASE = 'smdtpitch_'&amp;#10;# (code assumes that frequency values in file names are separated by&amp;#10;# an underscore)&amp;#10;&amp;#10;# define response box colors&amp;#10;HIGHER_COLOR = [0.7,-0.5,-0.5]&amp;#10;LOWER_COLOR = [0.5,-0.7,0.5]&amp;#10;NEUTRAL_COLOR = [0, 0, 0]&amp;#10;" valType="extendedCode"/>
+        <Param name="Before Experiment" updates="constant" val="from random import choices&amp;#10;&amp;#10;# SMDT original article: &amp;#10;# &quot;Difficulty increased progressively by making the pitch difference &amp;#10;# between the notes smaller in eight steps, in the following &amp;#10;# order: 17, 12, and 8 Hz difference (three items of each); 5, 4, 3, &amp;#10;# and 2 Hz difference (four items of each); 1 Hz difference (two items).&quot;&amp;#10;# form list which defines the tone difference for each trial&amp;#10;diff_ls = (&amp;#10;    [17] * 3 + &amp;#10;    [12] * 3 +&amp;#10;    [8] * 3 +&amp;#10;    [5] * 4 +&amp;#10;    [4] * 4 +&amp;#10;    [3] * 4 +&amp;#10;    [2] * 4 +&amp;#10;    [1] * 2&amp;#10;)&amp;#10;num_trials = len(diff_ls)&amp;#10;&amp;#10;# randomly generate a list which specifies for each trial if the second&amp;#10;# tone should be higher or lower than the first one. True means that the &amp;#10;# second tone is higher, False that the second tone is lower&amp;#10;second_higher_ls = choices([True, False], k=num_trials)&amp;#10;&amp;#10;# initialize trial counter&amp;#10;trial_counter = 0&amp;#10;&amp;#10;# define sound play duration (set to slightly longer than the actual&amp;#10;# sound file duration, 2.13s, to ensure that sounds are played &amp;#10;# in their entirety)&amp;#10;PLAY_DURATION = 2.5&amp;#10;&amp;#10;# define time at which boxes' colors should switch to indicate &amp;#10;# that the second tone is to play/playing&amp;#10;PLAY_HALFTIME = 1.05&amp;#10;&amp;#10;# define base frequency (500Hz according to SMDT article)&amp;#10;BASE_FREQUENCY = 500&amp;#10;&amp;#10;# define stimuli directory name&amp;#10;STIM_DIR = 'stimuli'&amp;#10;# define stimuli file name base&amp;#10;STIM_FBASE = 'smdtpitch_'&amp;#10;# (code assumes that frequency values in file names are separated by&amp;#10;# an underscore)&amp;#10;&amp;#10;# define response box colors&amp;#10;HIGHER_COLOR = [0.7,-0.5,-0.5]&amp;#10;LOWER_COLOR = [0.5,-0.7,0.5]&amp;#10;NEUTRAL_COLOR = [0, 0, 0]&amp;#10;" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="# get higher frequency for this trial&amp;#10;diff = diff_ls[trial_counter]&amp;#10;higher_frequency = BASE_FREQUENCY + diff&amp;#10;&amp;#10;# store trial start time for saving during &quot;End Routine&quot;&amp;#10;trial_start_time = tThisFlipGlobal + 0&amp;#10;&amp;#10;# set trial sound file path and specify correct response&amp;#10;second_higher = second_higher_ls[trial_counter]&amp;#10;if second_higher:&amp;#10;    first_freq, second_freq = BASE_FREQUENCY, higher_frequency&amp;#10;    correct_rect_name = pitch_rect_higher.name&amp;#10;    &amp;#10;else:&amp;#10;    first_freq, second_freq = higher_frequency, BASE_FREQUENCY&amp;#10;    correct_rect_name = pitch_rect_lower.name&amp;#10;&amp;#10;sound_fname = f'{STIM_FBASE}{first_freq}_{second_freq}.wav'&amp;#10;&amp;#10;sound_fpath = os.path.join(STIM_DIR, sound_fname)&amp;#10;&amp;#10;#pitch_sound_2.sound = 'stimuli/smdtpitch_500_501.wav'&amp;#10;pitch_rect_higher.fillColor = [0,0,0]&amp;#10;pitch_rect_lower.fillColor = [0,0,0]&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Py" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="if tThisFlip &gt;= PLAY_DURATION-frameTolerance:&amp;#10;    pitch_rect_higher.fillColor = HIGHER_COLOR&amp;#10;    pitch_rect_lower.fillColor = LOWER_COLOR&amp;#10;" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="if tThisFlip &gt;= PLAY_HALFTIME-frameTolerance:&amp;#10;    pitch_rect_higher.fillColor = HIGHER_COLOR&amp;#10;    pitch_rect_lower.fillColor = LOWER_COLOR&amp;#10;" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -444,7 +444,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="9999" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="Du kommer i varje uppgift att höra två olika toner spelas.&amp;#10;&amp;#10;I varje uppgift ska du avgöra om den andra tonen som spelas är lägre eller högre än den första. Du använder vänster musknapp för att ge dina svar.&amp;#10;&amp;#10;Fortsätt tills du ser ett slutmeddelande. Klicka med vänster musknapp på texten nedanför för att påbörja testet." valType="str"/>
         <Param name="units" updates="None" val="deg" valType="str"/>
@@ -468,7 +468,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="9999" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="Klicka här när du läst klart och är redo" valType="str"/>
         <Param name="units" updates="None" val="deg" valType="str"/>
@@ -488,7 +488,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="2.5" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="9999" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
         <Param name="timeRelativeTo" updates="constant" val="mouse onset" valType="str"/>
       </MouseComponent>
